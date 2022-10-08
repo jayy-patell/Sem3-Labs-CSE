@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
  class Account{
+    Scanner sc = new Scanner(System.in);
     String name;
     int accno;
     String type;
@@ -8,7 +9,7 @@ import java.util.Scanner;
     static float roi=3.2f;
     static int temp = 1111;
 
-    Account()
+    //Account()
 
     Account(String name, String type, int bal)
     {
@@ -20,13 +21,15 @@ import java.util.Scanner;
 
     void deposit(){
         int dep;
-        System.out.println("Enter amount to deposit: ")
+        System.out.println("Enter amount to deposit: ");
+        dep = sc.nextInt();
         bal += dep;
     }
 
     void withdraw(){
         int wid;
         System.out.println("Enter amount to withdraw: ");
+        wid = sc.nextInt();
         if(bal > wid)
             bal -= wid;
         else
@@ -41,8 +44,8 @@ import java.util.Scanner;
     void displayROI()
     {
         System.out.println("Rate of interest is: " + roi);
+        sc.close();
     }
-
 }
 
 
@@ -56,6 +59,7 @@ class Bank{
 
         System.out.println("Enter the number of Accounts to be Created.");
         int n = sc.nextInt();
+        int input;
 
         Account c[] = new Account[n];
 
@@ -77,6 +81,8 @@ class Bank{
         }
 
         do{
+            System.out.println("Which account to modify: ");
+            int p=sc.nextInt();
             System.out.println("1. Deposit:");
             System.out.println("2. Withdraw:");
             System.out.println("3. Display ACCOUNT details:");
@@ -87,11 +93,11 @@ class Bank{
 
             switch(input){
                 case 1:{
-                    
+                    c[p].deposit();
                     break;
                 }
                 case 2:{
-                    
+                    c[p].withdraw();
                     break;
                 }
                 case 3:{
@@ -114,7 +120,7 @@ class Bank{
             }
         }while(input!=5);
 
+        sc.close();
         
-        
-    }
+    }    
 }

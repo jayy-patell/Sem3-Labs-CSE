@@ -15,13 +15,15 @@ class Student {
     }
 
     Student(String name,int d,int m, int y,short semester,float gpavg,float cgpavg) {
-        GregorianCalendar gcal = new GregorianCalendar(y,m,d);    //to initialise object(gcal) with default time and date-set
+        GregorianCalendar gcal = new GregorianCalendar(y,m,d);    //to initialise object(gcal) with default time and date-user set
         // String st = Integer.toString(gcal.get(1));
         // String yst = st.substring(2,4);
         // String n = Integer.toString(count);
         String str = "";
         if(count>=1 && count<=9){
             str = str + y%100 + "0" + count;
+        }else{
+            str = str + y%100 + count;
         }
         regno = str;
         fName = name;
@@ -57,9 +59,45 @@ class Student {
             }
         }
     }
+    void sortByName(Student stds[],int n) {
+        Student temp = new Student();
+        for(int i=0;i<n-1;i++) {
+            for(int j=i;j<n;j++) {
+                if (((stds[i].fName).compareTo((stds[j].fName))) > 0) {
+                    temp = stds[i];
+                    stds[i] = stds[j];
+                    stds[j] = temp;
+                }
+            }
+        }
+    }
 
 
-
+    String manipulateName(String name) {
+        int flag=0;
+        String temp="";
+        char initial=' ';
+        String out ="";
+        for(int i=0;i<name.length();i++) {
+            if ( Character.isUpperCase(name.charAt(i))) {
+                flag=1;
+                initial=name.charAt(i);
+            }
+            if (flag == 1) {
+                temp = temp + name.charAt(i);
+            }
+            if ( name.charAt(i) == ' ') {
+                flag = 0;
+                out = out + initial + ". ";
+                temp="";
+            }
+            if (i == name.length()-1) {
+                out = out + temp;
+            }
+        }
+        return out;
+    }
+    
 }
 
 class RegistrationNum {
@@ -115,6 +153,8 @@ class RegistrationNum {
                 break;
             }
         }while(input!=3);
+
+        sc.close();
     }
 }
 
