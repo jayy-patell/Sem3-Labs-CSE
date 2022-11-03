@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Login page </title>
+<style>
+body {
+background-color: lightblue;
+}
+h1 {
+color: white;
+text-align: center;
+}
+p {
+font-family: verdana;
+font-size: 20px;
+}
+</style>
+<script language="javascript">
+function check(form)
+/*function to check userid & password*/
+{
+/*the following code checkes whether the entered userid and password
+are matching*/
+if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
+{
+window.open("https://www.google.com", "_blank");
+/*opens the target page while Id & password matches*/
+}
+else
+{
+alert("Error Password or Username") /*displays error message*/
+}
+}
+</script></head>
+<body>
+<h1> Validate Credentials </h1>
+<form name="login">
+Username<input type="text" name="userid"/>
+Password<input type="password" name="pswrd"/>
+<input type="button" onclick="check(this.form)" value="Login"/>
+<input type="reset" value="Cancel"/>
+</form>
+function getPosition(el) {
+  var xPos = 0;
+  var yPos = 0;
+ 
+  while (el) {
+    if (el.tagName == "BODY") {
+      // deal with browser quirks with body/window/document and page scroll
+      var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+      var yScroll = el.scrollTop || document.documentElement.scrollTop;
+ 
+      xPos += (el.offsetLeft - xScroll + el.clientLeft);
+      yPos += (el.offsetTop - yScroll + el.clientTop);
+    } else {
+      // for all other non-BODY elements
+      xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+    }
+ 
+    el = el.offsetParent;
+  }
+  return {
+    x: xPos,
+    y: yPos
+  };
+}
+ 
+// deal with the page getting resized or scrolled
+window.addEventListener("scroll", updatePosition, false);
+window.addEventListener("resize", updatePosition, false);
+</body>
+</html>
