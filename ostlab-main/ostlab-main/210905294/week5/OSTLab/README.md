@@ -1,2 +1,0 @@
-# OSTLab
-OSTLab Test Repository
