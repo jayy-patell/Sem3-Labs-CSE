@@ -1,15 +1,20 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void Lsearch(int a[], int n){
+void Lsearch(int a[], int m,int n){
     int i;
+    int flag=0;
+    // int n= a.length;
     for(i=0;i<n;i++){
-        if(n==a[i]){
-            printf("Element is present in the array.");
-        }else{
-            printf("Element not present");
+        if(m==a[i]){
+            flag=1;
         }
     }
+    if(flag==1){
+         printf("Element is present in the array.");
+    }else{
+          printf("Element not present");
+     }
 }
 
 int main(){
@@ -23,7 +28,7 @@ int main(){
     printf("Enter element to be searched: ");
     scanf("%d", &m);
 
-    Lsearch(a,m);
+    Lsearch(a,m,n);
 
     return 0;
 }

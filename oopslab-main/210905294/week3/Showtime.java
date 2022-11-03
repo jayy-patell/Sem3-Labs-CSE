@@ -109,5 +109,7 @@ class Showtime
 		}
 
 		t3.Compare(t1,t2);
+
+		sc.close();
 	}
 }

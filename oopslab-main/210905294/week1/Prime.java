@@ -16,6 +16,7 @@ class Prime
 				break;
 			}
 		}
+		sc.close();
 	}
 
 	static boolean isPrime(int n){
@@ -35,5 +36,7 @@ class Prime
 		}else{
 			return false;
 		}
+
 	}
+
 }

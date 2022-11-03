@@ -1,0 +1,68 @@
+function removeItemFromArray(array, n) {
+    const newArray = [];
+
+    for ( let i = 0; i < array.length; i++) {
+        if(array[i] !== n) {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
+
+const result = removeItemFromArray([1, 2, 3 , 4 , 5], 2);
+
+console.log(result);
+// program to remove item from an array
+
+function removeItemFromArray(array, n) {
+    const index = array.indexOf(n);
+
+    // if the element is in the array, remove it
+    if(index > -1) {
+
+        // remove item
+        array.splice(index, 1);
+    }
+    return array;
+}
+
+const result = removeItemFromArray([1, 2, 3 , 4, 5], 2);
+
+console.log(result);
+function insertElement() {
+    let array = [1, 2, 3, 4, 5];
+
+    // index to add to
+    let index = 3;
+
+    // element that you want to add
+    let element = 8;
+  
+    array.splice(index, 0, element);
+    console.log(array);
+}
+
+insertElement();
+function insertElement() {
+    let array = [1, 2, 3, 4];
+
+    // index to add to
+    let index = 3;
+
+    // element that you want to add
+    let element = 8;
+  
+    for (let i = array.length; i > index; i--) {
+
+        //shift the elements that are greater than index
+        array[i] = array[i-1];
+    }
+
+    // insert element at given index
+    array[index] = element;
+
+    console.log(array);
+}
+
+insertElement();
+

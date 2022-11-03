@@ -84,6 +84,7 @@ class Mixer
             arr[i]=sc.nextInt();
         }
     }
+
     Mixer mix(Mixer A){
         int i=0,j=0,k=0;
         int size = arr.length + A.arr.length;
@@ -105,6 +106,7 @@ class Mixer
         }
         return merged;
     }
+    
     void display(){
         System.out.println("The resultant array is: ");
         for(int i=0;i<arr.length;i++){
@@ -130,5 +132,7 @@ class MixingArrays
 
         //diplaying the merged array
         C.display();
+
+        sc.close();
     }
 }

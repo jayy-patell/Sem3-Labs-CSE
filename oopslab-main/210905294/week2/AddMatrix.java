@@ -20,7 +20,7 @@ class AddMatrix
 		}
 		System.out.println("\n");
 	}
-
+	sc.close();
 	}
 
 	public static void main(String args[])

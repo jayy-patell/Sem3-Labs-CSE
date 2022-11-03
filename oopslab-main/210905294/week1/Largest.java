@@ -13,6 +13,7 @@ class Largest
 
 		int large = largest(a,b,c);
 		System.out.println("The largest number is: "+large);
+		sc.close();
 	}
 
 	static int largest(int a, int b, int c)

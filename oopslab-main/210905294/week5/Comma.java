@@ -5,7 +5,7 @@ class Comma {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number ");
         long n = sc.nextLong();
-        String nStr = Long.toString(n);
+        String nStr = Long.toString(n);    //converted number to string using toString
         String out = "";
         int count=0;
         for(int i=nStr.length()-1;i>=0;i--) {
@@ -26,5 +26,6 @@ class Comma {
         }
 
         System.out.println("The comma punctuated number is: " + finalout);
+        sc.close();
     }
 }

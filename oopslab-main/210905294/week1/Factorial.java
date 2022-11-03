@@ -13,6 +13,7 @@ class Factorial
 		System.out.println("Factoial of the entered number is: "+ans);
 		int ncr = combinators();
 		System.out.println("NCR is: "+ncr);
+		sc.close();
 	}
 
 	static int fact(int n)
@@ -33,5 +34,6 @@ class Factorial
 		r = sc.nextInt();
 		answer = fact(num) / (fact(num-r)*fact(r));
 		return answer;
+
 	}
 }

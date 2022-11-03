@@ -35,6 +35,8 @@ class Bubble
 		for(i=0;i<n;i++){
 			System.out.println(arr[i]+"\t");
 		}
+
+		sc.close();
 	}
 
 
@@ -63,5 +65,7 @@ class Bubble
 
 	System.out.println("After sorting: ");
 	sort(array,arr);
+
+	sc.close();
 	}
 }

@@ -52,5 +52,6 @@ class StackOpn
         S.pop();
         S.display();
 
+        sc.close();
     }
 }

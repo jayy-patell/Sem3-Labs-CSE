@@ -73,6 +73,8 @@ class ComplexOpn
 
         System.out.println("The complex number after subtraction is:");
         c3.display();
+
+        sc.close();
     }
 }
     
