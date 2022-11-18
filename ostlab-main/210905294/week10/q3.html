@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>ques3</title>
+        <script src="../angular.js"></script>
+        <script src="script6.js"></script>
+    </head>
+    <body>
+        <div ng-app="DemoApp" ng-controller="DemoCtrl">
+            <form>
+            &nbsp;&nbsp;&nbsp;CURRENCY<br> <br>
+            &nbsp;&nbsp;&nbsp;
+            Price : <input type="number" placeholder="Enter price of one item" ng-model="price"><br>
+            &nbsp;&nbsp;&nbsp;
+            Quantity : <input type="number" placeholder="Enter number of items" ng-model="quan"><br>
+            </form>
+
+            <h3>{{ price }} * {{ quan }} = {{ price*quan }}</h3>
+            </div>
+    </body>
+</html>
