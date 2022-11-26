@@ -70,8 +70,6 @@ class InvalidMonthException extends Exception
 	}
 }
 
-
-
 class mdate
 {
 	public static void main(String[] args) 
@@ -87,7 +85,6 @@ class mdate
 		
 		try
 		{
-
 			cd.createDate(day,month,year);
 			System.out.println(cd);
 		}

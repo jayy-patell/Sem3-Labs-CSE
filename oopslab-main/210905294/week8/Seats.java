@@ -39,6 +39,7 @@ class Student
         
         System.out.print("\tEnter year of joining: ");
         yearJoined = sc.nextInt();
+        sc.close();
         
         if (seatNo > 25)
         {
